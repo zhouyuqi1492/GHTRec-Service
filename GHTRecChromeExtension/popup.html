@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="./popup.css">
+  <!-- <script src="./libs/jquery-3.5.1/jquery-3.5.1.min.js"></script> -->
+  <link rel="stylesheet" href="./libs/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  </script>
+  <!-- <script src="./libs/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script> -->
+</head>
+
+<body>
+  <div class="popup">
+    <div class="card">
+      <div class="user-login" style="display: inline-block;">用户尚未登录，请回到GitHub主页登录账号使用插件</div>
+      <div style="float:right;">账号</div>
+    </div>
+    <div class="card">
+      <div style="display: inline-block;">
+        <label>
+          偏好主题
+        </label>
+      </div>
+      <div style="float: right;">
+        <button class="btn button-info">
+          生成偏好
+        </button>
+      </div>
+      <div class="divider"></div>
+      <div>
+        <span class="label label-default">...</span>
+        <span class="label label-primary">...</span>
+        <span class="label label-success">...</span>
+        <span class="label label-info">...</span>
+        <span class="label label-warning">...</span>
+      </div>
+    </div>
+    <div class="card">
+      <div style="display: inline-block;"><label>推荐设置</label></div>
+      <div class="btn-group" role="group" aria-label="..." style="float: right;">
+        <button type="button" class="btn btn-default selected">今日</button>
+        <button type="button" class="btn btn-default">近三日</button>
+        <button type="button" class="btn btn-default">近一周</button>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <button class="btn" style="width: 490px; border-radius: 5px;">生成（刷新）推荐</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

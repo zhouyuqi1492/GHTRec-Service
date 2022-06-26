@@ -1,0 +1,47 @@
+{
+  "name": "GHT service",
+  "description": "Chrome Extension of GitHub Trending Page Repository Recommendation Service",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background_local.js"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://162.105.16.46:3001/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/GHTRec.png",
+      "32": "/images/GHTRec.png",
+      "48": "/images/GHTRec.png",
+      "128": "/images/GHTRec.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/trending*"
+      ],
+      "run_at": "document_idle",
+      "js": [
+        "trendingPageContent.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://github.com/"
+      ],
+      "run_at": "document_idle",
+      "js": [
+        "mainPageContent.js"
+      ]
+    }
+  ]
+}
